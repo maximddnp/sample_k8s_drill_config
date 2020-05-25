@@ -1,0 +1,106 @@
+Listening for transport dt_socket at address: 5006
+2020-05-25 18:33:46.026 [main] INFO  Application - No ktor.deployment.watch patterns specified, automatic reload is not active
+2020-05-25 18:33:48.028 [main] WARN  Application - Object nesting in Ktor Locations is going to be deprecated. Convert nested object to a class with parameter. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:33:49.633 [DefaultDispatcher-worker-1] INFO  c.e.d.a.p.ArtifactoryPluginLoader - Loading plugins [test2code] from artifactory...
+2020-05-25 18:33:49.668 [DefaultDispatcher-worker-1] INFO  c.e.d.a.p.ArtifactoryPluginLoader - Loading test2code v0.5.0-128
+2020-05-25 18:33:49.669 [DefaultDispatcher-worker-1] INFO  c.e.d.a.p.ArtifactoryPluginLoader - Downloading com/epam/drill/plugins/test2code-plugin/0.5.0-128/test2code-plugin-0.5.0-128.zip
+2020-05-25 18:33:51.850 [DefaultDispatcher-worker-1] INFO  c.e.d.a.p.ArtifactoryPluginLoader - Plugins loaded.
+2020-05-25 18:33:51.851 [DefaultDispatcher-worker-1] INFO  c.e.d.a.plugins.PluginLoaderService - Searching for plugins in paths [/distr/adminStorage]
+2020-05-25 18:33:51.852 [DefaultDispatcher-worker-1] INFO  c.e.d.a.plugins.PluginLoaderService - Plugin jars found: 1.
+2020-05-25 18:33:51.853 [DefaultDispatcher-worker-1] INFO  c.e.d.a.plugins.PluginLoaderService - Loading from /distr/adminStorage/test2code-plugin-0.5.0-128.zip.
+2020-05-25 18:33:51.953 [DefaultDispatcher-worker-1] INFO  c.e.d.a.plugins.PluginLoaderService - Plugin 'test2code' was loaded successfully.
+2020-05-25 18:33:52.003 [main] INFO  Application - Responding at http://0.0.0.0:8090
+2020-05-25 18:33:52.003 [main] INFO  Application - Responding at https://0.0.0.0:8443
+2020-05-25 18:34:09.228 [nioEventLoopGroup-3-1] INFO  jetbrains.exodus.env.EnvironmentImpl - No roots found: the database is empty
+2020-05-25 18:34:09.606 [nioEventLoopGroup-3-1] INFO  jetbrains.exodus.env.EnvironmentImpl - Exodus environment created: work/agents/FirstApp
+2020-05-25 18:34:09.819 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for '/agents'
+2020-05-25 18:34:09.964 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+2020-05-25 18:37:10.669 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - The socket connection was aborted
+2020-05-25 18:37:32.707 [nioEventLoopGroup-4-1] INFO  c.e.d.admin.endpoints.AgentManager - Plugin test2code successfully added to agent with id FirstApp!
+2020-05-25 18:37:32.804 [nioEventLoopGroup-4-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for '/agents'
+2020-05-25 18:37:32.857 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+2020-05-25 18:37:32.905 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+2020-05-25 18:37:34.987 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for '/agents/FirstApp/builds'
+2020-05-25 18:37:35.399 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+2020-05-25 18:37:35.529 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+2020-05-25 18:37:35.742 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+Initializing plugin test2code...
+Config: hello from default plugin config... This is 'plugin_config.json file
+1 classes to load
+2020-05-25 18:37:36.503 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/active-sessions'
+2020-05-25 18:37:36.510 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scopes'
+{}
+BuildCoverage(ratio=0.0, count=Count(covered=0, total=10), methodCount=Count(covered=0, total=0), riskCount=Count(covered=0, total=0), byTestType={}, diff=0.0, prevBuildVersion=, arrow=null, finishedScopesCount=0)
+2020-05-25 18:37:36.607 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/build/coverage-by-packages'
+2020-05-25 18:37:36.612 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/build/tests-usages'
+2020-05-25 18:37:36.615 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/build/tests/covered-methods'
+2020-05-25 18:37:36.618 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/build/test-types/covered-methods'
+{}
+ScopeCoverage(ratio=0.0, count=Count(covered=0, total=10), methodCount=Count(covered=0, total=0), riskCount=Count(covered=0, total=0), byTestType={})
+2020-05-25 18:37:36.635 [nioEventLoopGroup-3-1] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:37:36.638 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage'
+2020-05-25 18:37:36.641 [nioEventLoopGroup-3-1] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:37:36.644 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage-by-packages'
+2020-05-25 18:37:36.645 [nioEventLoopGroup-3-1] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:37:36.647 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/methods'
+2020-05-25 18:37:36.649 [nioEventLoopGroup-3-1] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:37:36.650 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests-usages'
+2020-05-25 18:37:36.652 [nioEventLoopGroup-3-1] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:37:36.653 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests/covered-methods'
+2020-05-25 18:37:36.655 [nioEventLoopGroup-3-1] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:37:36.655 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/test-types/covered-methods'
+2020-05-25 18:37:36.705 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/active-scope'
+2020-05-25 18:37:36.706 [nioEventLoopGroup-3-1] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:37:36.707 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf'
+2020-05-25 18:37:36.708 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+2020-05-25 18:37:36.741 [nioEventLoopGroup-4-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for '/agents/FirstApp/builds'
+2020-05-25 18:37:36.749 [nioEventLoopGroup-4-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for '/agents'
+2020-05-25 18:43:21.091 [nioEventLoopGroup-4-1] INFO  c.e.d.a.e.plugin.PluginDispatcher - StatusResponse(code=200, data=StartSession(payload=StartSessionPayload(sessionId=a9c183ac-3a11-45fa-bd64-13df8f6f3e21, startPayload=StartPayload(testType=AUTO, sessionId=))))
+Session a9c183ac-3a11-45fa-bd64-13df8f6f3e21 started.
+2020-05-25 18:43:21.244 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/active-sessions'
+2020-05-25 18:43:21.283 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet
+2020-05-25 18:43:31.934 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/active-scope'
+2020-05-25 18:43:31.936 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf'
+2020-05-25 18:43:31.947 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scopes'
+{AUTO=TestTypeSummary(testType=AUTO, coverage=20.0, testCount=1, coveredMethodsCount=1)}
+BuildCoverage(ratio=20.0, count=Count(covered=2, total=10), methodCount=Count(covered=1, total=3), riskCount=Count(covered=0, total=0), byTestType={AUTO=TestTypeSummary(testType=AUTO, coverage=20.0, testCount=1, coveredMethodsCount=1)}, diff=20.0, prevBuildVersion=, arrow=null, finishedScopesCount=0)
+Assoc tests - ids count: 3
+2020-05-25 18:43:31.990 [DefaultDispatcher-worker-2] WARN  Application - A nested location class should have a parameter with the type of the outer location class. See https://github.com/ktorio/ktor/issues/1660 for more details.
+2020-05-25 18:43:31.991 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/associated-tests'
+2020-05-25 18:43:31.992 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage'
+2020-05-25 18:43:31.993 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage-by-packages'
+2020-05-25 18:43:32.008 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/methods'
+2020-05-25 18:43:32.010 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests-usages'
+2020-05-25 18:43:32.011 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests/covered-methods'
+2020-05-25 18:43:32.013 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/test-types/covered-methods'
+Action 'StopSession(payload=SessionPayload(sessionId=a9c183ac-3a11-45fa-bd64-13df8f6f3e21))' is not supported!
+2020-05-25 18:43:32.687 [nioEventLoopGroup-4-1] INFO  c.e.d.a.e.plugin.PluginDispatcher - StatusResponse(code=200, data=null)
+2020-05-25 18:43:32.812 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/active-scope'
+2020-05-25 18:43:32.818 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf'
+2020-05-25 18:43:32.818 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scopes'
+{AUTO=TestTypeSummary(testType=AUTO, coverage=20.0, testCount=1, coveredMethodsCount=1)}
+BuildCoverage(ratio=20.0, count=Count(covered=2, total=10), methodCount=Count(covered=1, total=3), riskCount=Count(covered=0, total=0), byTestType={AUTO=TestTypeSummary(testType=AUTO, coverage=20.0, testCount=1, coveredMethodsCount=1)}, diff=20.0, prevBuildVersion=, arrow=null, finishedScopesCount=0)
+Assoc tests - ids count: 3
+2020-05-25 18:43:32.824 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/associated-tests'
+2020-05-25 18:43:32.824 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage'
+2020-05-25 18:43:32.824 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage-by-packages'
+2020-05-25 18:43:32.825 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/methods'
+2020-05-25 18:43:32.825 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests-usages'
+2020-05-25 18:43:32.829 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests/covered-methods'
+2020-05-25 18:43:32.829 [DefaultDispatcher-worker-2] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/test-types/covered-methods'
+2020-05-25 18:43:32.845 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/active-sessions'
+2020-05-25 18:43:32.850 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/active-scope'
+2020-05-25 18:43:32.853 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf'
+2020-05-25 18:43:32.859 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scopes'
+{AUTO=TestTypeSummary(testType=AUTO, coverage=20.0, testCount=1, coveredMethodsCount=1)}
+ScopeCoverage(ratio=20.0, count=Count(covered=2, total=10), methodCount=Count(covered=1, total=3), riskCount=Count(covered=0, total=0), byTestType={AUTO=TestTypeSummary(testType=AUTO, coverage=20.0, testCount=1, coveredMethodsCount=1)})
+Assoc tests - ids count: 3
+2020-05-25 18:43:32.870 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/associated-tests'
+2020-05-25 18:43:32.880 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage'
+2020-05-25 18:43:32.881 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/coverage-by-packages'
+2020-05-25 18:43:32.881 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/methods'
+2020-05-25 18:43:32.881 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests-usages'
+2020-05-25 18:43:32.882 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/tests/covered-methods'
+2020-05-25 18:43:32.882 [nioEventLoopGroup-3-1] WARN  c.e.d.a.e.agent.SessionStorage - No subscription for 'agent::FirstApp:unspecified/scope/3ca40cdb-803a-4553-bf0a-352caa1635bf/test-types/covered-methods'
+Session a9c183ac-3a11-45fa-bd64-13df8f6f3e21 finished.
+2020-05-25 18:43:32.886 [nioEventLoopGroup-3-1] WARN  c.e.d.a.endpoints.agent.AgentHandler - Message with type 'DEBUG' is not supported yet

@@ -1,0 +1,10 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://oss.jfrog.org/artifactory/oss-release-local' }
+    }
+}
+rootProject.name = 'test_task_covid_api'
+
+
+
+
