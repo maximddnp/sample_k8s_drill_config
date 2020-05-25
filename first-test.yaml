@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: first-test
+  labels:
+    app: first-test
+    tier: backend
+spec:
+
+  replicas: 1
+  selector:
+    matchLabels:
+      app: first-test
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: first-test
+        tier: backend
+    spec:
+      initContainers:
+        - name: drill-agents
+          image: adenmin/agent-files:0.5.0-65
+          command:
+           - "sh"
+           - "-c"
+           - "ls -la /agents/java/ && cp -rf /agents/java/ /drill && ls -la /drill/java"
+          volumeMounts:
+           - name: diskmem
+             mountPath: /drill
+
+      volumes:
+       - name: diskmem
+         emptyDir:
+          medium: Memory
+          sizeLimit: 256Mi
+
+      containers:
+
+       - name: first-test
+         image: maximddnp/hello-example:0.0.1
+         imagePullPolicy: Always
+         env:
+          - name: JAVA_TOOL_OPTIONS
+            value: -agentpath:/drill/java/libdrill_agent.so=drillInstallationDir=/drill/java,adminAddress=drill-admin:8090,agentId=FirstApp
+         volumeMounts:
+          - name: diskmem
+            mountPath: /drill
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: first-test
+  namespace: default
+  labels:
+    app: first-test
+spec:
+  selector:
+    app: first-test
+  type: NodePort
+  ports:
+  - port: 8080
+    name: tcp8080
+    protocol: TCP
+    targetPort: 8080

@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: drill-admin
+  namespace: default
+  labels:
+    app: drill-admin
+    tier: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drill-admin
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: drill-admin
+        tier: backend
+    spec:
+      containers:
+      - env:
+        - name: TEST2CODE_PLUGIN_VERSION
+          value: 0.5.0-128
+        - name: LOG_LEVEL
+          value: INFO
+        image: drill4j/admin:0.5.0-130
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8090
+            scheme: HTTP
+          initialDelaySeconds: 300
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: drill-admin
+        ports:
+        - containerPort: 8090
+          name: tcp8090
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 8090
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 800m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: drill-admin
+  labels:
+    app: drill-admin
+  namespace: default
+spec:
+  selector:
+    app: drill-admin
+  type: NodePort
+  ports:
+  - port: 8090
+    name: tcp8090
+    protocol: TCP
+    targetPort: 8090

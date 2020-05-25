@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  labels:
+    app: drill-admin-ui
+    tier: backend
+  name: drill-admin-ui
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drill-admin-ui
+      tier: backend
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: drill-admin-ui
+        tier: backend
+      name: drill-admin-ui
+    spec:
+      containers:
+      - image: drill4j/admin-ui:0.5.0-37
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 300
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: drill-admin-ui
+        ports:
+        - containerPort: 8080
+          name: tcp8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          successThreshold: 1
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: 800m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: drill-admin-ui
+  namespace: default
+  labels:
+    app: drill-admin-ui
+spec:
+  selector:
+    app: drill-admin-ui
+  type: NodePort
+  ports:
+  - name: tcp8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
